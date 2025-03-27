@@ -23,76 +23,76 @@ logger = logging.get_logger(__name__)
 
 class QuantumClassicalConfig(PretrainedConfig):
     """
-    [中文] 量子经典同构Transformer模型的配置类
+    量子经典同构Transformer模型的配置类
     
     此配置类用于创建量子域和经典域交互的Transformer模型，实现宇宙自参照同构优化
     
-    [English] Configuration class for Quantum Classical Isomorphic Transformer Model
+    Configuration class for Quantum Classical Isomorphic Transformer Model
     
     This configuration class is used to create a Transformer model with quantum and classical domain interaction,
     implementing universe self-referential isomorphic optimization.
     
     Args:
         vocab_size (`int`, *optional*, defaults to 30522):
-            [中文] 词汇表大小
-            [English] Vocabulary size
+            词汇表大小
+            Vocabulary size
         hidden_size (`int`, *optional*, defaults to 768):
-            [中文] 隐藏层维度
-            [English] Hidden layer dimension
+            隐藏层维度
+            Hidden layer dimension
         num_hidden_layers (`int`, *optional*, defaults to 12):
-            [中文] Transformer编码器层数
-            [English] Number of Transformer encoder layers
+            Transformer编码器层数
+            Number of Transformer encoder layers
         num_attention_heads (`int`, *optional*, defaults to 12):
-            [中文] 注意力头数量
-            [English] Number of attention heads
+            注意力头数量
+            Number of attention heads
         intermediate_size (`int`, *optional*, defaults to 3072):
-            [中文] 前馈网络中间层维度
-            [English] Intermediate layer dimension in feed-forward network
+            前馈网络中间层维度
+            Intermediate layer dimension in feed-forward network
         hidden_act (`str` or `Callable`, *optional*, defaults to `"gelu"`):
-            [中文] 激活函数
-            [English] Activation function
+            激活函数
+            Activation function
         hidden_dropout_prob (`float`, *optional*, defaults to 0.1):
-            [中文] 隐藏层dropout概率
-            [English] Hidden layer dropout probability
+            隐藏层dropout概率
+            Hidden layer dropout probability
         attention_probs_dropout_prob (`float`, *optional*, defaults to 0.1):
-            [中文] 注意力概率dropout概率
-            [English] Attention probabilities dropout probability
+            注意力概率dropout概率
+            Attention probabilities dropout probability
         max_position_embeddings (`int`, *optional*, defaults to 512):
-            [中文] 位置编码最大长度
-            [English] Maximum length of position embeddings
+            位置编码最大长度
+            Maximum length of position embeddings
         type_vocab_size (`int`, *optional*, defaults to 2):
-            [中文] token类型词汇表大小
-            [English] Token type vocabulary size
+            token类型词汇表大小
+            Token type vocabulary size
         initializer_range (`float`, *optional*, defaults to 0.02):
-            [中文] 初始化范围
-            [English] Initialization range
+            初始化范围
+            Initialization range
         layer_norm_eps (`float`, *optional*, defaults to 1e-12):
-            [中文] Layer norm的epsilon值
-            [English] Epsilon value for layer normalization
+            Layer norm的epsilon值
+            Epsilon value for layer normalization
         pad_token_id (`int`, *optional*, defaults to 0):
-            [中文] padding token的ID
-            [English] ID of the padding token
+            padding token的ID
+            ID of the padding token
         position_embedding_type (`str`, *optional*, defaults to `"absolute"`):
-            [中文] 位置编码类型
-            [English] Position embedding type
+            位置编码类型
+            Position embedding type
         quantum_layer_alpha (`float`, *optional*, defaults to 0.5):
-            [中文] 量子层的权重参数alpha，控制量子域熵最小化
-            [English] Weight parameter alpha for quantum layer, controls quantum domain entropy minimization
+            量子层的权重参数alpha，控制量子域熵最小化
+            Weight parameter alpha for quantum layer, controls quantum domain entropy minimization
         classical_layer_beta (`float`, *optional*, defaults to 0.5):
-            [中文] 经典层的权重参数beta，控制经典域熵最大化
-            [English] Weight parameter beta for classical layer, controls classical domain entropy maximization
+            经典层的权重参数beta，控制经典域熵最大化
+            Weight parameter beta for classical layer, controls classical domain entropy maximization
         mrao_gamma (`float`, *optional*, defaults to 0.5):
-            [中文] 无限维度递归自适应算子的gamma系数，控制动态注意力强度
-            [English] Gamma coefficient for meta recursive adaptive operator, controls dynamic attention intensity
+            无限维度递归自适应算子的gamma系数，控制动态注意力强度
+            Gamma coefficient for meta recursive adaptive operator, controls dynamic attention intensity
         universe_gate_init (`float`, *optional*, defaults to 0.5):
-            [中文] 宇宙门初始值，控制量子-经典交互初始平衡
-            [English] Universe gate initial value, controls initial balance of quantum-classical interaction
+            宇宙门初始值，控制量子-经典交互初始平衡
+            Universe gate initial value, controls initial balance of quantum-classical interaction
         use_quantum_attention (`bool`, *optional*, defaults to True):
-            [中文] 是否使用量子注意力机制
-            [English] Whether to use quantum attention mechanism
+            是否使用量子注意力机制
+            Whether to use quantum attention mechanism
         use_classical_refinement (`bool`, *optional*, defaults to True):
-            [中文] 是否使用经典优化
-            [English] Whether to use classical refinement
+            是否使用经典优化
+            Whether to use classical refinement
     """
     
     model_type = "quantum_classical"

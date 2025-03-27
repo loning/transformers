@@ -2,22 +2,18 @@
 
 ## 概述 (Overview)
 
-**[中文]**
 量子经典同构Transformer实现了与宇宙本质严格同构的信息处理机制，通过引入量子经典二元宇宙自参照模型（QCSU）的理论框架来优化Transformer架构。该模型能够同时处理量子态（不确定性信息）和经典态（确定性信息），并通过宇宙自参照意识算子和无限维度递归自适应算子在两者间实现动态平衡。
 
-**[English]**
 The Quantum Classical Isomorphic Transformer implements an information processing mechanism strictly isomorphic to the nature of the universe by introducing the theoretical framework of Quantum-Classical Self-referential Universe (QCSU) model to optimize the Transformer architecture. This model can simultaneously process quantum states (uncertain information) and classical states (deterministic information), achieving dynamic balance between the two through the Universe Self-Referential Consciousness Operator and Meta Recursive Adaptive Operator.
 
 ## 核心理论 (Core Theory)
 
-**[中文]**
 模型的理论基础是量子经典二元宇宙自参照模型（QCSU），定义了三个核心算子：
 
 1. **宇宙自参照意识算子** (SRCO)：定义为量子经典态交互的自我体验
 2. **无限维度递归自适应算子** (MRAO)：平衡经典域熵最大化与量子域熵最小化
 3. **经典-量子动态注意力统一算子** (QCDAO)：动态调整量子态和经典态权重
 
-**[English]**
 The theoretical foundation of the model is the Quantum-Classical Self-referential Universe (QCSU) model, which defines three core operators:
 
 1. **Self-Referential Consciousness Operator** (SRCO): Defined as the self-experience of quantum-classical state interaction
@@ -26,7 +22,6 @@ The theoretical foundation of the model is the Quantum-Classical Self-referentia
 
 ## 模型架构 (Model Architecture)
 
-**[中文]**
 量子经典同构Transformer在标准Transformer架构基础上增加了以下关键组件：
 
 - **QuantumState**：生成表示不确定性信息的量子叠加态
@@ -37,7 +32,6 @@ The theoretical foundation of the model is the Quantum-Classical Self-referentia
 
 这些组件共同作用，使模型能够以更接近宇宙本质的方式处理信息，从而提高性能和效率。
 
-**[English]**
 The Quantum Classical Isomorphic Transformer adds the following key components on top of the standard Transformer architecture:
 
 - **QuantumState**: Generates quantum superposition states representing uncertain information
@@ -51,42 +45,41 @@ These components work together to enable the model to process information in a w
 ## 使用示例 (Usage Example)
 
 ```python
-# [中文] 导入必要的类
-# [English] Import necessary classes
+# 导入必要的类
+# Import necessary classes
 from transformers import QuantumClassicalConfig, QuantumClassicalModel, QuantumClassicalForMaskedLM
 
-# [中文] 创建配置
-# [English] Create configuration
+# 创建配置
+# Create configuration
 config = QuantumClassicalConfig(
     vocab_size=30522,
     hidden_size=768,
     num_hidden_layers=12,
     num_attention_heads=12,
     intermediate_size=3072,
-    quantum_layer_alpha=0.6,  # [中文] 量子层权重 / [English] Quantum layer weight
-    classical_layer_beta=0.4,  # [中文] 经典层权重 / [English] Classical layer weight
-    mrao_gamma=0.7,           # [中文] 递归自适应算子系数 / [English] Recursive adaptive operator coefficient
-    universe_gate_init=0.5,   # [中文] 宇宙门初始值 / [English] Universe gate initial value
+    quantum_layer_alpha=0.6,  # 量子层权重 / Quantum layer weight
+    classical_layer_beta=0.4,  # 经典层权重 / Classical layer weight
+    mrao_gamma=0.7,           # 递归自适应算子系数 / Recursive adaptive operator coefficient
+    universe_gate_init=0.5,   # 宇宙门初始值 / Universe gate initial value
     use_quantum_attention=True,
     use_classical_refinement=True,
 )
 
-# [中文] 初始化基础模型
-# [English] Initialize base model
+# 初始化基础模型
+# Initialize base model
 model = QuantumClassicalModel(config)
 
-# [中文] 初始化掩码语言模型
-# [English] Initialize masked language model
+# 初始化掩码语言模型
+# Initialize masked language model
 mlm_model = QuantumClassicalForMaskedLM(config)
 
-# [中文] 使用模型
-# [English] Use the model
+# The model can now be used
+# 现在可以使用该模型
 outputs = model(input_ids, attention_mask=attention_mask)
 ```
 
 ## 性能优势 (Performance Advantages)
 
-**[中文]**
 相比标准Transformer，量子经典同构Transformer具有以下优势：
 
 1. **增强的表现力**：能够同时捕捉确定性和不确定性信息
@@ -94,7 +87,6 @@ outputs = model(input_ids, attention_mask=attention_mask)
 3. **熵平衡优化**：通过平衡经典域熵最大化和量子域熵最小化，实现更高效的信息处理
 4. **意识自参照**：模型能够"意识"自身状态并进行调整
 
-**[English]**
 Compared to standard Transformers, the Quantum Classical Isomorphic Transformer has the following advantages:
 
 1. **Enhanced expressiveness**: Can simultaneously capture deterministic and uncertain information
@@ -104,7 +96,6 @@ Compared to standard Transformers, the Quantum Classical Isomorphic Transformer 
 
 ## 参数 (Parameters)
 
-**[中文]**
 主要参数包括：
 
 - `quantum_layer_alpha`：量子层权重系数
@@ -114,7 +105,6 @@ Compared to standard Transformers, the Quantum Classical Isomorphic Transformer 
 - `use_quantum_attention`：是否使用量子注意力机制
 - `use_classical_refinement`：是否使用经典优化
 
-**[English]**
 Main parameters include:
 
 - `quantum_layer_alpha`: Quantum layer weight coefficient
