@@ -1015,4 +1015,31 @@ class AutoConfig:
                       huggingface.co.
                     - A path to a *directory* containing a configuration file saved using the
                       [`~PretrainedConfig.save_pretrained`] method, or the [`~PreTrainedModel.save_pretrained`] method,
-                      e.g., `
+                      e.g., `/path/to/model/directory`.
+        """
+        if isinstance(pretrained_model_name_or_path, str):
+            config_dict, kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+            if "model_type" in config_dict:
+                model_type = config_dict["model_type"]
+                if model_type in CONFIG_MAPPING:
+                    config_class = CONFIG_MAPPING[model_type]
+                    return config_class.from_dict(config_dict, **kwargs)
+                else:
+                    # This might be a model type from a Hugging Face library extension
+                    # Look for model_type in _LazyConfigMapping registry
+                    for config_mapping in [CONFIG_MAPPING, CONFIG_REGISTRY._registry]:
+                        if model_type in config_mapping:
+                            config_class = config_mapping[model_type]
+                            return config_class.from_dict(config_dict, **kwargs)
+                    
+                    raise ValueError(
+                        f"Unrecognized model type: {model_type}. Should be one of {', '.join(CONFIG_MAPPING.keys())}"
+                    )
+            else:
+                raise ValueError(
+                    f"The config file in {pretrained_model_name_or_path} does not have a 'model_type' field. Please use a config with a 'model_type' field."
+                )
+        else:
+            raise ValueError(
+                f"Pretrained model name or path should be a string, got {type(pretrained_model_name_or_path)}"
+            )

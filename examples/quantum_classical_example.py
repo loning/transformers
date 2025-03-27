@@ -47,9 +47,16 @@ The additional computational cost is small, adding only a linear k·n·d term co
 the original Transformer (where k is much smaller than n).
 """
 
+import sys
+import os
+
+# 添加项目根目录到Python路径
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import torch
-from transformers import (
-    QuantumClassicalConfig,
+# 直接从项目中导入模型
+from src.transformers.models.quantum_classical.configuration_quantum_classical import QuantumClassicalConfig
+from src.transformers.models.quantum_classical.modeling_quantum_classical import (
     QuantumClassicalModel,
     QuantumClassicalForMaskedLM,
 )
