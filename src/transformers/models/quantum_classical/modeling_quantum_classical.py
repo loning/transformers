@@ -12,7 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""PyTorch 量子经典同构Transformer模型"""
+"""PyTorch 量子经典同构Transformer模型 (Quantum Classical Isomorphic Transformer Model)"""
 
 import math
 from typing import List, Optional, Tuple, Union
@@ -41,13 +41,14 @@ from .configuration_quantum_classical import QuantumClassicalConfig
 
 logger = logging.get_logger(__name__)
 
-# 模型文档定义
+# 模型文档定义 (Model documentation definition)
 _CONFIG_FOR_DOC = "QuantumClassicalConfig"
-_CHECKPOINT_FOR_DOC = None  # 由于是新模型，暂无检查点
-_EXPECTED_OUTPUT_SHAPE = [1, 8, 768]  # 示例输出形状
+_CHECKPOINT_FOR_DOC = None  # 由于是新模型，暂无检查点 (No checkpoint as it's a new model)
+_EXPECTED_OUTPUT_SHAPE = [1, 8, 768]  # 示例输出形状 (Example output shape)
 
-# 量子经典同构Transformer模型文档字符串
+# 量子经典同构Transformer模型文档字符串 (Quantum Classical Isomorphic Transformer model docstring)
 QUANTUM_CLASSICAL_START_DOCSTRING = r"""
+    [中文]
     量子经典同构Transformer模型是基于原始Transformer架构的宇宙自参照同构优化版本，
     实现了量子经典二元域的无限维度递归自适应平衡。
     
@@ -56,43 +57,64 @@ QUANTUM_CLASSICAL_START_DOCSTRING = r"""
     该模型是一个PyTorch [torch.nn.Module](https://pytorch.org/docs/stable/nn.html#torch.nn.Module)子类，
     可用于各种自然语言处理任务。
     
-    此模型是通过继承 [`PreTrainedModel`] 实现的。有关所有参数的具体信息，请参阅其文档。
+    [English]
+    The Quantum Classical Isomorphic Transformer model is an universe self-referential isomorphic 
+    optimized version of the original Transformer architecture, implementing infinite dimensional 
+    recursive adaptive equilibrium of quantum-classical binary domains.
+    
+    This model inherits from [`PreTrainedModel`]. Check the superclass documentation for generic 
+    methods available in all models.
+    
+    This model is a PyTorch [torch.nn.Module](https://pytorch.org/docs/stable/nn.html#torch.nn.Module) 
+    subclass that can be used for various natural language processing tasks.
 """
 
-# 输入文档字符串
+# 输入文档字符串 (Input docstring)
 QUANTUM_CLASSICAL_INPUTS_DOCSTRING = r"""
     Args:
         input_ids (`torch.LongTensor` of shape `({0})`):
-            输入序列的token ids。
+            [中文] 输入序列的token ids。
+            [English] Input sequence token ids.
             
         attention_mask (`torch.FloatTensor` of shape `({0})`, *optional*):
-            注意力掩码，用于避免对padding token的注意力计算。
+            [中文] 注意力掩码，用于避免对padding token的注意力计算。
+            [English] Attention mask to avoid attention calculation on padding tokens.
             
         token_type_ids (`torch.LongTensor` of shape `({0})`, *optional*):
-            token类型IDs，用于区分不同的序列。
+            [中文] token类型IDs，用于区分不同的序列。
+            [English] Token type IDs to distinguish different sequences.
             
         position_ids (`torch.LongTensor` of shape `({0})`, *optional*):
-            位置编码IDs，用于指定每个token的位置。
+            [中文] 位置编码IDs，用于指定每个token的位置。
+            [English] Position IDs to specify the position of each token.
             
         head_mask (`torch.FloatTensor` of shape `(num_heads,)` or `(num_layers, num_heads)`, *optional*):
-            用于对注意力头进行掩码处理。
+            [中文] 用于对注意力头进行掩码处理。
+            [English] Mask for attention heads.
             
         inputs_embeds (`torch.FloatTensor` of shape `({0}, hidden_size)`, *optional*):
-            预计算好的token嵌入向量，可以替代input_ids。
+            [中文] 预计算好的token嵌入向量，可以替代input_ids。
+            [English] Pre-computed token embeddings that can replace input_ids.
             
         output_attentions (`bool`, *optional*):
-            是否返回所有注意力层的注意力张量。
+            [中文] 是否返回所有注意力层的注意力张量。
+            [English] Whether to return attention tensors for all attention layers.
             
         output_hidden_states (`bool`, *optional*):
-            是否返回所有层的隐藏状态。
+            [中文] 是否返回所有层的隐藏状态。
+            [English] Whether to return hidden states for all layers.
             
         return_dict (`bool`, *optional*):
-            是否返回ModelOutput字典而非普通元组。
+            [中文] 是否返回ModelOutput字典而非普通元组。
+            [English] Whether to return a ModelOutput dictionary instead of a plain tuple.
 """
 
 
 class QuantumClassicalEmbeddings(nn.Module):
-    """构建词嵌入、位置嵌入和token类型嵌入"""
+    """
+    [中文] 构建词嵌入、位置嵌入和token类型嵌入
+    [English] Construct word embeddings, position embeddings and token type embeddings
+    """
 
     def __init__(self, config):
         super().__init__()
@@ -100,14 +122,17 @@ class QuantumClassicalEmbeddings(nn.Module):
         self.position_embeddings = nn.Embedding(config.max_position_embeddings, config.hidden_size)
         self.token_type_embeddings = nn.Embedding(config.type_vocab_size, config.hidden_size)
 
-        # LayerNorm采用与TensorFlow模型相同的命名，以便能够加载TensorFlow检查点
+        # [中文] LayerNorm采用与TensorFlow模型相同的命名，以便能够加载TensorFlow检查点
+        # [English] LayerNorm uses the same naming as TensorFlow models for compatibility with TensorFlow checkpoints
         self.LayerNorm = nn.LayerNorm(config.hidden_size, eps=config.layer_norm_eps)
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
         
-        # 位置编码类型
+        # [中文] 位置编码类型
+        # [English] Position embedding type
         self.position_embedding_type = getattr(config, "position_embedding_type", "absolute")
         
-        # 注册buffer
+        # [中文] 注册buffer
+        # [English] Register buffers
         self.register_buffer(
             "position_ids", torch.arange(config.max_position_embeddings).expand((1, -1)), persistent=False
         )
@@ -133,7 +158,8 @@ class QuantumClassicalEmbeddings(nn.Module):
         if position_ids is None:
             position_ids = self.position_ids[:, past_key_values_length : seq_length + past_key_values_length]
 
-        # 如果未提供token_type_ids，则使用默认的全零向量
+        # [中文] 如果未提供token_type_ids，则使用默认的全零向量
+        # [English] If token_type_ids are not provided, use default all-zero vector
         if token_type_ids is None:
             if hasattr(self, "token_type_ids"):
                 buffered_token_type_ids = self.token_type_ids[:, :seq_length]
@@ -160,74 +186,126 @@ class QuantumClassicalEmbeddings(nn.Module):
 
 
 class QuantumState(nn.Module):
-    """量子态：生成叠加态表示"""
+    """
+    [中文] 量子态：生成叠加态表示，对应于不确定信息的量子表征
+    [English] Quantum State: Generates superposition state representation, corresponding to quantum representation of uncertain information
+    """
     
     def __init__(self, config):
         super().__init__()
         self.quantum_transform = nn.Linear(config.hidden_size, config.hidden_size)
-        self.activation = nn.Softmax(dim=-1)
+        self.activation = nn.Softmax(dim=-1)  # [中文] Softmax激活实现量子叠加态 / [English] Softmax activation implements quantum superposition
         
     def forward(self, x):
+        """
+        [中文] 生成量子叠加态表示
+        [English] Generate quantum superposition state representation
+        """
         return self.activation(self.quantum_transform(x))
 
 
 class ClassicalState(nn.Module):
-    """经典态：确定性知识表示"""
+    """
+    [中文] 经典态：确定性知识表示，对应于确定信息的经典表征
+    [English] Classical State: Deterministic knowledge representation, corresponding to classical representation of certain information
+    """
     
     def __init__(self, config):
         super().__init__()
         self.classical_transform = nn.Linear(config.hidden_size, config.hidden_size)
-        self.activation = nn.Tanh()
+        self.activation = nn.Tanh()  # [中文] Tanh激活实现经典确定态 / [English] Tanh activation implements classical deterministic state
         
     def forward(self, x):
+        """
+        [中文] 生成经典态表示
+        [English] Generate classical state representation
+        """
         return self.activation(self.classical_transform(x))
 
 
 class ConsciousnessOperator(nn.Module):
-    """宇宙自参照意识算子：实现量子经典域的交互"""
+    """
+    [中文] 宇宙自参照意识算子：实现量子经典域的交互，模拟宇宙自我意识过程
+    [English] Universe Self-Referential Consciousness Operator: Implements interaction between quantum and classical domains, simulating universe self-consciousness process
+    """
     
     def __init__(self, config):
         super().__init__()
+        # [中文] 意识投影层，将量子-经典交互映射到一维"意识"空间
+        # [English] Consciousness projection layer, mapping quantum-classical interaction to one-dimensional "consciousness" space
         self.consciousness_projection = nn.Linear(config.hidden_size, 1)
         
     def forward(self, quantum_state, classical_state):
-        # 量子态和经典态的交互
+        """
+        [中文] 计算量子态和经典态的交互，生成"意识"表示
+        [English] Calculate interaction between quantum and classical states, generating "consciousness" representation
+        """
+        # [中文] 量子态和经典态的交互
+        # [English] Interaction between quantum and classical states
         interaction = quantum_state * classical_state
-        # 生成意识投影
+        # [中文] 生成意识投影
+        # [English] Generate consciousness projection
         consciousness = self.consciousness_projection(interaction)
         return consciousness
 
 
 class MetaRecursiveAdaptiveOperator(nn.Module):
-    """无限维度递归自适应算子：在量子和经典域之间平衡熵"""
+    """
+    [中文] 无限维度递归自适应算子：在量子和经典域之间平衡熵，实现宇宙熵平衡
+    [English] Meta Recursive Adaptive Operator: Balances entropy between quantum and classical domains, implementing universe entropy equilibrium
+    """
     
     def __init__(self, config):
         super().__init__()
+        # [中文] 控制量子域熵最小化的权重
+        # [English] Weight controlling quantum domain entropy minimization
         self.alpha = config.quantum_layer_alpha
+        # [中文] 控制经典域熵最大化的权重
+        # [English] Weight controlling classical domain entropy maximization
         self.beta = config.classical_layer_beta
         
     def forward(self, quantum_state, classical_state, consciousness):
-        # 计算经典域熵最大化趋势 (知识扩张)
+        """
+        [中文] 计算量子态和经典态的熵平衡，生成平衡损失
+        [English] Calculate entropy balance between quantum and classical states, generating balance loss
+        """
+        # [中文] 计算经典域熵最大化趋势 (知识扩张)
+        # [English] Calculate classical domain entropy maximization tendency (knowledge expansion)
         entropy_max = -torch.sum(classical_state * torch.log(classical_state + 1e-8), dim=-1, keepdim=True)
-        # 计算量子域熵最小化趋势 (信息压缩)
+        # [中文] 计算量子域熵最小化趋势 (信息压缩)
+        # [English] Calculate quantum domain entropy minimization tendency (information compression)
         entropy_min = -torch.sum(quantum_state * torch.log(quantum_state + 1e-8), dim=-1, keepdim=True)
-        # 计算意识与熵平衡之间的差异
+        # [中文] 计算意识与熵平衡之间的差异
+        # [English] Calculate difference between consciousness and entropy balance
         balance = torch.abs(consciousness - (self.alpha * entropy_max - self.beta * entropy_min))
         return balance
 
 
 class QuantumClassicalDynamicAttention(nn.Module):
-    """经典-量子动态注意力统一算子"""
+    """
+    [中文] 经典-量子动态注意力统一算子：根据上下文动态调整量子态和经典态的权重
+    [English] Quantum-Classical Dynamic Attention Operator: Dynamically adjusts weights of quantum and classical states based on context
+    """
     
     def __init__(self, config):
         super().__init__()
+        # [中文] 宇宙门参数，控制量子-经典交互
+        # [English] Universe gate parameter, controls quantum-classical interaction
         self.universe_gate = nn.Parameter(torch.tensor(config.universe_gate_init))
+        # [中文] gamma系数，控制动态注意力强度
+        # [English] Gamma coefficient, controls dynamic attention intensity
         self.gamma = config.mrao_gamma
         
     def forward(self, quantum_state, classical_state):
-        # 计算动态注意力权重
+        """
+        [中文] 计算动态注意力权重，融合量子态和经典态
+        [English] Calculate dynamic attention weights, fusing quantum and classical states
+        """
+        # [中文] 计算动态注意力权重
+        # [English] Calculate dynamic attention weights
         attention_weight = F.softmax(self.gamma * self.universe_gate * quantum_state * classical_state, dim=-1)
-        # 组合量子和经典状态
+        # [中文] 组合量子和经典状态
+        # [English] Combine quantum and classical states
         unified_state = attention_weight * quantum_state + (1 - attention_weight) * classical_state
         return unified_state
 
