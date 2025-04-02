@@ -663,6 +663,1551 @@ _import_structure = {
         "OmDetTurboConfig",
         "OmDetTurboProcessor",
     ],
+    "models.oneformer": ["OneFormerConfig", "OneFormerProcessor"],
+    "models.ontological_transformer": ["OntologicalTransformerConfig"],
+    "models.open_gemma": ["OpenGemmaConfig"],
+    "models.openai": [
+        "OpenAIGPTConfig",
+        "OpenAIGPTTokenizer",
+    ],
+    "models.opt": ["OPTConfig"],
+    "models.owlv2": [
+        "Owlv2Config",
+        "Owlv2Processor",
+        "Owlv2TextConfig",
+        "Owlv2VisionConfig",
+    ],
+    "models.owlvit": [
+        "OwlViTConfig",
+        "OwlViTProcessor",
+        "OwlViTTextConfig",
+        "OwlViTVisionConfig",
+    ],
+    "models.paligemma": ["PaliGemmaConfig"],
+    "models.patchtsmixer": ["PatchTSMixerConfig"],
+    "models.patchtst": ["PatchTSTConfig"],
+    "models.pegasus": [
+        "PegasusConfig",
+        "PegasusTokenizer",
+    ],
+    "models.pegasus_x": ["PegasusXConfig"],
+    "models.perceiver": [
+        "PerceiverConfig",
+        "PerceiverTokenizer",
+    ],
+    "models.persimmon": ["PersimmonConfig"],
+    "models.phi": ["PhiConfig"],
+    "models.phi3": ["Phi3Config"],
+    "models.phi4_multimodal": [
+        "Phi4MultimodalAudioConfig",
+        "Phi4MultimodalConfig",
+        "Phi4MultimodalFeatureExtractor",
+        "Phi4MultimodalProcessor",
+        "Phi4MultimodalVisionConfig",
+    ],
+    "models.phimoe": ["PhimoeConfig"],
+    "models.phobert": ["PhobertTokenizer"],
+    "models.pix2struct": [
+        "Pix2StructConfig",
+        "Pix2StructProcessor",
+        "Pix2StructTextConfig",
+        "Pix2StructVisionConfig",
+    ],
+    "models.pixtral": ["PixtralProcessor", "PixtralVisionConfig"],
+    "models.plbart": ["PLBartConfig"],
+    "models.poolformer": ["PoolFormerConfig"],
+    "models.pop2piano": ["Pop2PianoConfig"],
+    "models.prompt_depth_anything": ["PromptDepthAnythingConfig"],
+    "models.prophetnet": [
+        "ProphetNetConfig",
+        "ProphetNetTokenizer",
+    ],
+    "models.pvt": ["PvtConfig"],
+    "models.pvt_v2": ["PvtV2Config"],
+    "models.qwen2": [
+        "Qwen2Config",
+        "Qwen2Tokenizer",
+    ],
+    "models.qwen2_5_vl": [
+        "Qwen2_5_VLConfig",
+        "Qwen2_5_VLProcessor",
+    ],
+    "models.qwen2_audio": [
+        "Qwen2AudioConfig",
+        "Qwen2AudioEncoderConfig",
+        "Qwen2AudioProcessor",
+    ],
+    "models.qwen2_moe": ["Qwen2MoeConfig"],
+    "models.qwen2_vl": [
+        "Qwen2VLConfig",
+        "Qwen2VLProcessor",
+    ],
+    "models.rag": ["RagConfig", "RagRetriever", "RagTokenizer"],
+    "models.recurrent_gemma": ["RecurrentGemmaConfig"],
+    "models.reformer": ["ReformerConfig"],
+    "models.regnet": ["RegNetConfig"],
+    "models.rembert": ["RemBertConfig"],
+    "models.resnet": ["ResNetConfig"],
+    "models.roberta": [
+        "RobertaConfig",
+        "RobertaTokenizer",
+    ],
+    "models.roberta_prelayernorm": ["RobertaPreLayerNormConfig"],
+    "models.roc_bert": [
+        "RoCBertConfig",
+        "RoCBertTokenizer",
+    ],
+    "models.roformer": [
+        "RoFormerConfig",
+        "RoFormerTokenizer",
+    ],
+    "models.rt_detr": ["RTDetrConfig", "RTDetrResNetConfig"],
+    "models.rt_detr_v2": ["RTDetrV2Config"],
+    "models.rwkv": ["RwkvConfig"],
+    "models.sam": [
+        "SamConfig",
+        "SamMaskDecoderConfig",
+        "SamProcessor",
+        "SamPromptEncoderConfig",
+        "SamVisionConfig",
+    ],
+    "models.seamless_m4t": [
+        "SeamlessM4TConfig",
+        "SeamlessM4TFeatureExtractor",
+        "SeamlessM4TProcessor",
+    ],
+    "models.seamless_m4t_v2": ["SeamlessM4Tv2Config"],
+    "models.segformer": ["SegformerConfig"],
+    "models.seggpt": ["SegGptConfig"],
+    "models.sew": ["SEWConfig"],
+    "models.sew_d": ["SEWDConfig"],
+    "models.shieldgemma2": [
+        "ShieldGemma2Config",
+        "ShieldGemma2Processor",
+    ],
+    "models.siglip": [
+        "SiglipConfig",
+        "SiglipProcessor",
+        "SiglipTextConfig",
+        "SiglipVisionConfig",
+    ],
+    "models.siglip2": [
+        "Siglip2Config",
+        "Siglip2Processor",
+        "Siglip2TextConfig",
+        "Siglip2VisionConfig",
+    ],
+    "models.omdet_turbo": [
+        "OmDetTurboConfig",
+        "OmDetTurboProcessor",
+    ],
+    "models.oneformer": ["OneFormerConfig", "OneFormerProcessor"],
+    "models.ontological_transformer": ["OntologicalTransformerConfig"],
+    "models.open_gemma": ["OpenGemmaConfig"],
+    "models.openai": [
+        "OpenAIGPTConfig",
+        "OpenAIGPTTokenizer",
+    ],
+    "models.opt": [
+        "OPTConfig",
+        "OPTTokenizer",
+    ],
+    "models.org_bert": [
+        "OrgBertConfig",
+        "OrgBertTokenizer",
+    ],
+    "models.oscar": [
+        "OscarConfig",
+        "OscarTokenizer",
+    ],
+    "models.owlv2": ["Owlv2Config"],
+    "models.owlvit": [
+        "OwlViTConfig",
+        "OwlViTFeatureExtractor",
+        "OwlViTImageProcessor",
+        "OwlViTProcessor",
+    ],
+    "models.p_tuning_v2": ["PTuningV2Config"],
+    "models.paco": ["PacoConfig"],
+    "models.palm": ["PalmConfig"],
+    "models.panq": ["PanQConfig"],
+    "models.pegasus": [
+        "PegasusConfig",
+        "PegasusTokenizer",
+    ],
+    "models.perceiver": [
+        "PerceiverConfig",
+        "PerceiverFeatureExtractor",
+        "PerceiverImageProcessor",
+        "PerceiverProcessor",
+    ],
+    "models.perceiver_ar": [
+        "PerceiverARConfig",
+        "PerceiverARProcessor",
+    ],
+    "models.perceiver_io": [
+        "PerceiverIOConfig",
+        "PerceiverIOProcessor",
+    ],
+    "models.persimmon": ["PersimmonConfig"],
+    "models.phobert": [
+        "PhobertConfig",
+        "PhobertTokenizer",
+    ],
+    "models.pix2struct": [
+        "Pix2StructConfig",
+        "Pix2StructImageProcessor",
+        "Pix2StructProcessor",
+    ],
+    "models.pixtral": ["PixtralConfig"],
+    "models.plbart": [
+        "PLBartConfig",
+        "PLBartTokenizer",
+    ],
+    "models.poolformer": [
+        "PoolFormerConfig",
+        "PoolFormerFeatureExtractor",
+        "PoolFormerImageProcessor",
+    ],
+    "models.prophetnet": [
+        "ProphetNetConfig",
+        "ProphetNetTokenizer",
+    ],
+    "models.prompt_depth_anything": [
+        "PromptDepthAnythingConfig",
+        "PromptDepthAnythingImageProcessor",
+    ],
+    "models.prophetnet_ar": [
+        "ProphetNetARConfig",
+        "ProphetNetARTokenizer",
+    ],
+    "models.prophetnet_ar_seq2seq": [
+        "ProphetNetARSeq2SeqConfig",
+        "ProphetNetARSeq2SeqTokenizer",
+    ],
+    "models.prophetnet_byt5": [
+        "ProphetNetByT5Config",
+        "ProphetNetByT5Tokenizer",
+    ],
+    "models.prophetnet_byt5_multi": [
+        "ProphetNetByT5MultiConfig",
+        "ProphetNetByT5MultiTokenizer",
+    ],
+    "models.prophetnet_decoder": [
+        "ProphetNetDecoderConfig",
+        "ProphetNetDecoderTokenizer",
+    ],
+    "models.prophetnet_encoder": [
+        "ProphetNetEncoderConfig",
+        "ProphetNetEncoderTokenizer",
+    ],
+    "models.prophetnet_grammar": [
+        "ProphetNetGrammarConfig",
+        "ProphetNetGrammarTokenizer",
+    ],
+    "models.prophetnet_grammar_seq2seq": [
+        "ProphetNetGrammarSeq2SeqConfig",
+        "ProphetNetGrammarSeq2SeqTokenizer",
+    ],
+    "models.prophetnet_parallel_decoder": [
+        "ProphetNetParallelDecoderConfig",
+        "ProphetNetParallelDecoderTokenizer",
+    ],
+    "models.prophetnet_seq2seq": [
+        "ProphetNetSeq2SeqConfig",
+        "ProphetNetSeq2SeqTokenizer",
+    ],
+    "models.prophetnet_t5": [
+        "ProphetNetT5Config",
+        "ProphetNetT5Tokenizer",
+    ],
+    "models.prophetnet_t5_multi": [
+        "ProphetNetT5MultiConfig",
+        "ProphetNetT5MultiTokenizer",
+    ],
+    "models.prophetnet_timeseries": [
+        "ProphetNetTimeseriesConfig",
+        "ProphetNetTimeseriesTokenizer",
+    ],
+    "models.prophetnet_translation": [
+        "ProphetNetTranslationConfig",
+        "ProphetNetTranslationTokenizer",
+    ],
+    "models.prophetnet_translation_multi": [
+        "ProphetNetTranslationMultiConfig",
+        "ProphetNetTranslationMultiTokenizer",
+    ],
+    "models.prophetnet_translation_multi_sampled": [
+        "ProphetNetTranslationMultiSampledConfig",
+        "ProphetNetTranslationMultiSampledTokenizer",
+    ],
+    "models.prophetnet_translation_sampled": [
+        "ProphetNetTranslationSampledConfig",
+        "ProphetNetTranslationSampledTokenizer",
+    ],
+    "models.prophetnet_zero_shot": [
+        "ProphetNetZeroShotConfig",
+        "ProphetNetZeroShotTokenizer",
+    ],
+    "models.prophetnet_zero_shot_multi": [
+        "ProphetNetZeroShotMultiConfig",
+        "ProphetNetZeroShotMultiTokenizer",
+    ],
+    "models.prophetnet_zero_shot_multi_sampled": [
+        "ProphetNetZeroShotMultiSampledConfig",
+        "ProphetNetZeroShotMultiSampledTokenizer",
+    ],
+    "models.prophetnet_zero_shot_sampled": [
+        "ProphetNetZeroShotSampledConfig",
+        "ProphetNetZeroShotSampledTokenizer",
+    ],
+    "models.qwen2": [
+        "Qwen2Config",
+        "Qwen2Tokenizer",
+    ],
+    "models.qwen2_vl": [
+        "Qwen2VLConfig",
+        "Qwen2VLImageProcessor",
+        "Qwen2VLProcessor",
+    ],
+    "models.qwen_audio": [
+        "QwenAudioConfig",
+        "QwenAudioProcessor",
+    ],
+    "models.qwen_audio_text": [
+        "QwenAudioTextConfig",
+        "QwenAudioTextProcessor",
+    ],
+    "models.qwen_text": [
+        "QwenTextConfig",
+        "QwenTextTokenizer",
+    ],
+    "models.qwen_vision": [
+        "QwenVisionConfig",
+        "QwenVisionImageProcessor",
+        "QwenVisionProcessor",
+    ],
+    "models.rag": [
+        "RagConfig",
+        "RagRetriever",
+        "RagSequenceForGeneration",
+        "RagToken",
+        "RagTokenForGeneration",
+        "RagTokenizer",
+    ],
+    "models.rbt3": [
+        "RBT3Config",
+        "RBT3Tokenizer",
+    ],
+    "models.rbtl3": [
+        "RBTL3Config",
+        "RBTL3Tokenizer",
+    ],
+    "models.rembert": [
+        "RemBertConfig",
+        "RemBertTokenizer",
+    ],
+    "models.repligpt": [
+        "RepligptConfig",
+        "RepligptTokenizer",
+    ],
+    "models.retribert": [
+        "RetriBertConfig",
+        "RetriBertTokenizer",
+    ],
+    "models.roberta": [
+        "RobertaConfig",
+        "RobertaTokenizer",
+    ],
+    "models.roberta_generation": [
+        "RobertaGenerationConfig",
+        "RobertaGenerationTokenizer",
+    ],
+    "models.roberta_heads": [
+        "RobertaHeadsConfig",
+        "RobertaHeadsTokenizer",
+    ],
+    "models.roberta_japanese": [
+        "RobertaJapaneseConfig",
+        "RobertaJapaneseTokenizer",
+    ],
+    "models.roberta_large_mnli": [
+        "RobertaLargeMNLIConfig",
+        "RobertaLargeMNLITokenizer",
+    ],
+    "models.roberta_spanish": [
+        "RobertaSpanishConfig",
+        "RobertaSpanishTokenizer",
+    ],
+    "models.roformer": [
+        "RoFormerConfig",
+        "RoFormerTokenizer",
+    ],
+    "models.roformer_cnn": [
+        "RoFormerCNNConfig",
+        "RoFormerCNNTokenizer",
+    ],
+    "models.roformer_sim": [
+        "RoFormerSimConfig",
+        "RoFormerSimTokenizer",
+    ],
+    "models.roformer_v2": [
+        "RoFormerV2Config",
+        "RoFormerV2Tokenizer",
+    ],
+    "models.roformer_xml": [
+        "RoFormerXMLConfig",
+        "RoFormerXMLTokenizer",
+    ],
+    "models.roformer_xml_retrieval": [
+        "RoFormerXMLRetrievalConfig",
+        "RoFormerXMLRetrievalTokenizer",
+    ],
+    "models.roformer_xml_roberta": [
+        "RoFormerXMLRobertaConfig",
+        "RoFormerXMLRobertaTokenizer",
+    ],
+    "models.roformer_xml_roberta_large": [
+        "RoFormerXMLRobertaLargeConfig",
+        "RoFormerXMLRobertaLargeTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval": [
+        "RoFormerXMLRobertaLargeRetrievalConfig",
+        "RoFormerXMLRobertaLargeRetrievalTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim": [
+        "RoFormerXMLRobertaLargeRetrievalSimConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2Config",
+        "RoFormerXMLRobertaLargeRetrievalSimV2Tokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_dense": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2DenseConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2DenseTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_dense_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2DenseEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2DenseEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_dense_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2DenseEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2DenseEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_dense_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2DenseEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2DenseEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_dense_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2DensePassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2DensePassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_dense_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2DenseQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2DenseQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2PassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2PassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_passage": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryPassageTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder": [
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderConfig",
+        "RoFormerXMLRobertaLargeRetrievalSimV2QueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryQueryEncoderTokenizer",
+    ],
+    "models.roformer_xml_roberta_large_retrieval_sim_v2_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_query_encoder_passage": [
+# Copyright 2020 The HuggingFace Team. All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# When adding a new object to this init, remember to add it twice: once inside the `_import_structure` dictionary and
+# once inside the `if TYPE_CHECKING` branch. The `TYPE_CHECKING` should have import statements as usual, but they are
+# only there for type checking. The `_import_structure` is a dictionary submodule to list of object names, and is used
+# to defer the actual importing for when the objects are requested. This way `import transformers` provides the names
+# in the namespace without actually importing anything (and especially none of the backends).
+
+__version__ = "4.51.0.dev0"
+
+from typing import TYPE_CHECKING
+
+# Check the dependencies satisfy the minimal versions required.
+from . import dependency_versions_check
+from .utils import (
+    OptionalDependencyNotAvailable,
+    _LazyModule,
+    is_bitsandbytes_available,
+    is_essentia_available,
+    is_flax_available,
+    is_g2p_en_available,
+    is_keras_nlp_available,
+    is_librosa_available,
+    is_pretty_midi_available,
+    is_scipy_available,
+    is_sentencepiece_available,
+    is_speech_available,
+    is_tensorflow_text_available,
+    is_tf_available,
+    is_timm_available,
+    is_tokenizers_available,
+    is_torch_available,
+    is_torchaudio_available,
+    is_torchvision_available,
+    is_vision_available,
+    logging,
+)
+
+
+logger = logging.get_logger(__name__)  # pylint: disable=invalid-name
+
+
+# Base objects, independent of any specific backend
+_import_structure = {
+    "agents": [
+        "Agent",
+        "CodeAgent",
+        "HfApiEngine",
+        "ManagedAgent",
+        "PipelineTool",
+        "ReactAgent",
+        "ReactCodeAgent",
+        "ReactJsonAgent",
+        "Tool",
+        "Toolbox",
+        "ToolCollection",
+        "TransformersEngine",
+        "launch_gradio_demo",
+        "load_tool",
+        "stream_to_gradio",
+        "tool",
+    ],
+    "audio_utils": [],
+    "commands": [],
+    "configuration_utils": ["PretrainedConfig"],
+    "convert_graph_to_onnx": [],
+    "convert_slow_tokenizers_checkpoints_to_fast": [],
+    "convert_tf_hub_seq_to_seq_bert_to_pytorch": [],
+    "data": [
+        "DataProcessor",
+        "InputExample",
+        "InputFeatures",
+        "SingleSentenceClassificationProcessor",
+        "SquadExample",
+        "SquadFeatures",
+        "SquadV1Processor",
+        "SquadV2Processor",
+        "glue_compute_metrics",
+        "glue_convert_examples_to_features",
+        "glue_output_modes",
+        "glue_processors",
+        "glue_tasks_num_labels",
+        "squad_convert_examples_to_features",
+        "xnli_compute_metrics",
+        "xnli_output_modes",
+        "xnli_processors",
+        "xnli_tasks_num_labels",
+    ],
+    "data.data_collator": [
+        "DataCollator",
+        "DataCollatorForLanguageModeling",
+        "DataCollatorForMultipleChoice",
+        "DataCollatorForPermutationLanguageModeling",
+        "DataCollatorForSeq2Seq",
+        "DataCollatorForSOP",
+        "DataCollatorForTokenClassification",
+        "DataCollatorForWholeWordMask",
+        "DataCollatorWithFlattening",
+        "DataCollatorWithPadding",
+        "DefaultDataCollator",
+        "default_data_collator",
+    ],
+    "data.metrics": [],
+    "data.processors": [],
+    "debug_utils": [],
+    "dependency_versions_check": [],
+    "dependency_versions_table": [],
+    "dynamic_module_utils": [],
+    "feature_extraction_sequence_utils": ["SequenceFeatureExtractor"],
+    "feature_extraction_utils": ["BatchFeature", "FeatureExtractionMixin"],
+    "file_utils": [],
+    "generation": [
+        "AsyncTextIteratorStreamer",
+        "CompileConfig",
+        "GenerationConfig",
+        "TextIteratorStreamer",
+        "TextStreamer",
+        "WatermarkingConfig",
+    ],
+    "hf_argparser": ["HfArgumentParser"],
+    "hyperparameter_search": [],
+    "image_transforms": [],
+    "integrations": [
+        "is_clearml_available",
+        "is_comet_available",
+        "is_dvclive_available",
+        "is_neptune_available",
+        "is_optuna_available",
+        "is_ray_available",
+        "is_ray_tune_available",
+        "is_sigopt_available",
+        "is_swanlab_available",
+        "is_tensorboard_available",
+        "is_wandb_available",
+    ],
+    "loss": [],
+    "modelcard": ["ModelCard"],
+    # Losses
+    "modeling_tf_pytorch_utils": [
+        "convert_tf_weight_name_to_pt_weight_name",
+        "load_pytorch_checkpoint_in_tf2_model",
+        "load_pytorch_model_in_tf2_model",
+        "load_pytorch_weights_in_tf2_model",
+        "load_tf2_checkpoint_in_pytorch_model",
+        "load_tf2_model_in_pytorch_model",
+        "load_tf2_weights_in_pytorch_model",
+    ],
+    # Models
+    "models": [],
+    "models.albert": ["AlbertConfig"],
+    "models.align": [
+        "AlignConfig",
+        "AlignProcessor",
+        "AlignTextConfig",
+        "AlignVisionConfig",
+    ],
+    "models.altclip": [
+        "AltCLIPConfig",
+        "AltCLIPProcessor",
+        "AltCLIPTextConfig",
+        "AltCLIPVisionConfig",
+    ],
+    "models.aria": [
+        "AriaConfig",
+        "AriaProcessor",
+        "AriaTextConfig",
+    ],
+    "models.audio_spectrogram_transformer": [
+        "ASTConfig",
+        "ASTFeatureExtractor",
+    ],
+    "models.auto": [
+        "CONFIG_MAPPING",
+        "FEATURE_EXTRACTOR_MAPPING",
+        "IMAGE_PROCESSOR_MAPPING",
+        "MODEL_NAMES_MAPPING",
+        "PROCESSOR_MAPPING",
+        "TOKENIZER_MAPPING",
+        "AutoConfig",
+        "AutoFeatureExtractor",
+        "AutoImageProcessor",
+        "AutoProcessor",
+        "AutoTokenizer",
+    ],
+    "models.autoformer": ["AutoformerConfig"],
+    "models.aya_vision": ["AyaVisionConfig", "AyaVisionProcessor"],
+    "models.bamba": ["BambaConfig"],
+    "models.bark": [
+        "BarkCoarseConfig",
+        "BarkConfig",
+        "BarkFineConfig",
+        "BarkProcessor",
+        "BarkSemanticConfig",
+    ],
+    "models.bart": ["BartConfig", "BartTokenizer"],
+    "models.barthez": [],
+    "models.bartpho": [],
+    "models.beit": ["BeitConfig"],
+    "models.bert": [
+        "BasicTokenizer",
+        "BertConfig",
+        "BertTokenizer",
+        "WordpieceTokenizer",
+    ],
+    "models.bert_generation": ["BertGenerationConfig"],
+    "models.bert_japanese": [
+        "BertJapaneseTokenizer",
+        "CharacterTokenizer",
+        "MecabTokenizer",
+    ],
+    "models.bertweet": ["BertweetTokenizer"],
+    "models.big_bird": ["BigBirdConfig"],
+    "models.bigbird_pegasus": ["BigBirdPegasusConfig"],
+    "models.biogpt": [
+        "BioGptConfig",
+        "BioGptTokenizer",
+    ],
+    "models.bit": ["BitConfig"],
+    "models.blenderbot": [
+        "BlenderbotConfig",
+        "BlenderbotTokenizer",
+    ],
+    "models.blenderbot_small": [
+        "BlenderbotSmallConfig",
+        "BlenderbotSmallTokenizer",
+    ],
+    "models.blip": [
+        "BlipConfig",
+        "BlipProcessor",
+        "BlipTextConfig",
+        "BlipVisionConfig",
+    ],
+    "models.blip_2": [
+        "Blip2Config",
+        "Blip2Processor",
+        "Blip2QFormerConfig",
+        "Blip2VisionConfig",
+    ],
+    "models.bloom": ["BloomConfig"],
+    "models.bridgetower": [
+        "BridgeTowerConfig",
+        "BridgeTowerProcessor",
+        "BridgeTowerTextConfig",
+        "BridgeTowerVisionConfig",
+    ],
+    "models.bros": [
+        "BrosConfig",
+        "BrosProcessor",
+    ],
+    "models.byt5": ["ByT5Tokenizer"],
+    "models.camembert": ["CamembertConfig"],
+    "models.canine": [
+        "CanineConfig",
+        "CanineTokenizer",
+    ],
+    "models.chameleon": [
+        "ChameleonConfig",
+        "ChameleonProcessor",
+        "ChameleonVQVAEConfig",
+    ],
+    "models.chinese_clip": [
+        "ChineseCLIPConfig",
+        "ChineseCLIPProcessor",
+        "ChineseCLIPTextConfig",
+        "ChineseCLIPVisionConfig",
+    ],
+    "models.clap": [
+        "ClapAudioConfig",
+        "ClapConfig",
+        "ClapProcessor",
+        "ClapTextConfig",
+    ],
+    "models.clip": [
+        "CLIPConfig",
+        "CLIPProcessor",
+        "CLIPTextConfig",
+        "CLIPTokenizer",
+        "CLIPVisionConfig",
+    ],
+    "models.clipseg": [
+        "CLIPSegConfig",
+        "CLIPSegProcessor",
+        "CLIPSegTextConfig",
+        "CLIPSegVisionConfig",
+    ],
+    "models.clvp": [
+        "ClvpConfig",
+        "ClvpDecoderConfig",
+        "ClvpEncoderConfig",
+        "ClvpFeatureExtractor",
+        "ClvpProcessor",
+        "ClvpTokenizer",
+    ],
+    "models.code_llama": [],
+    "models.codegen": [
+        "CodeGenConfig",
+        "CodeGenTokenizer",
+    ],
+    "models.cohere": ["CohereConfig"],
+    "models.cohere2": ["Cohere2Config"],
+    "models.colpali": [
+        "ColPaliConfig",
+        "ColPaliProcessor",
+    ],
+    "models.conditional_detr": ["ConditionalDetrConfig"],
+    "models.convbert": [
+        "ConvBertConfig",
+        "ConvBertTokenizer",
+    ],
+    "models.convnext": ["ConvNextConfig"],
+    "models.convnextv2": ["ConvNextV2Config"],
+    "models.cpm": [],
+    "models.cpmant": [
+        "CpmAntConfig",
+        "CpmAntTokenizer",
+    ],
+    "models.ctrl": [
+        "CTRLConfig",
+        "CTRLTokenizer",
+    ],
+    "models.cvt": ["CvtConfig"],
+    "models.dab_detr": ["DabDetrConfig"],
+    "models.dac": ["DacConfig", "DacFeatureExtractor"],
+    "models.data2vec": [
+        "Data2VecAudioConfig",
+        "Data2VecTextConfig",
+        "Data2VecVisionConfig",
+    ],
+    "models.dbrx": ["DbrxConfig"],
+    "models.deberta": [
+        "DebertaConfig",
+        "DebertaTokenizer",
+    ],
+    "models.deberta_v2": ["DebertaV2Config"],
+    "models.decision_transformer": ["DecisionTransformerConfig"],
+    "models.deformable_detr": ["DeformableDetrConfig"],
+    "models.deit": ["DeiTConfig"],
+    "models.deprecated": [],
+    "models.deprecated.bort": [],
+    "models.deprecated.deta": ["DetaConfig"],
+    "models.deprecated.efficientformer": ["EfficientFormerConfig"],
+    "models.deprecated.ernie_m": ["ErnieMConfig"],
+    "models.deprecated.gptsan_japanese": [
+        "GPTSanJapaneseConfig",
+        "GPTSanJapaneseTokenizer",
+    ],
+    "models.deprecated.graphormer": ["GraphormerConfig"],
+    "models.deprecated.jukebox": [
+        "JukeboxConfig",
+        "JukeboxPriorConfig",
+        "JukeboxTokenizer",
+        "JukeboxVQVAEConfig",
+    ],
+    "models.deprecated.mctct": [
+        "MCTCTConfig",
+        "MCTCTFeatureExtractor",
+        "MCTCTProcessor",
+    ],
+    "models.deprecated.mega": ["MegaConfig"],
+    "models.deprecated.mmbt": ["MMBTConfig"],
+    "models.deprecated.nat": ["NatConfig"],
+    "models.deprecated.nezha": ["NezhaConfig"],
+    "models.deprecated.open_llama": ["OpenLlamaConfig"],
+    "models.deprecated.qdqbert": ["QDQBertConfig"],
+    "models.deprecated.realm": [
+        "RealmConfig",
+        "RealmTokenizer",
+    ],
+    "models.deprecated.retribert": [
+        "RetriBertConfig",
+        "RetriBertTokenizer",
+    ],
+    "models.deprecated.speech_to_text_2": [
+        "Speech2Text2Config",
+        "Speech2Text2Processor",
+        "Speech2Text2Tokenizer",
+    ],
+    "models.deprecated.tapex": ["TapexTokenizer"],
+    "models.deprecated.trajectory_transformer": ["TrajectoryTransformerConfig"],
+    "models.deprecated.transfo_xl": [
+        "TransfoXLConfig",
+        "TransfoXLCorpus",
+        "TransfoXLTokenizer",
+    ],
+    "models.deprecated.tvlt": [
+        "TvltConfig",
+        "TvltFeatureExtractor",
+        "TvltProcessor",
+    ],
+    "models.deprecated.van": ["VanConfig"],
+    "models.deprecated.vit_hybrid": ["ViTHybridConfig"],
+    "models.deprecated.xlm_prophetnet": ["XLMProphetNetConfig"],
+    "models.depth_anything": ["DepthAnythingConfig"],
+    "models.depth_pro": ["DepthProConfig"],
+    "models.detr": ["DetrConfig"],
+    "models.dialogpt": [],
+    "models.diffllama": ["DiffLlamaConfig"],
+    "models.dinat": ["DinatConfig"],
+    "models.dinov2": ["Dinov2Config"],
+    "models.dinov2_with_registers": ["Dinov2WithRegistersConfig"],
+    "models.distilbert": [
+        "DistilBertConfig",
+        "DistilBertTokenizer",
+    ],
+    "models.dit": [],
+    "models.donut": [
+        "DonutProcessor",
+        "DonutSwinConfig",
+    ],
+    "models.dpr": [
+        "DPRConfig",
+        "DPRContextEncoderTokenizer",
+        "DPRQuestionEncoderTokenizer",
+        "DPRReaderOutput",
+        "DPRReaderTokenizer",
+    ],
+    "models.dpt": ["DPTConfig"],
+    "models.efficientnet": ["EfficientNetConfig"],
+    "models.electra": [
+        "ElectraConfig",
+        "ElectraTokenizer",
+    ],
+    "models.emu3": [
+        "Emu3Config",
+        "Emu3Processor",
+        "Emu3TextConfig",
+        "Emu3VQVAEConfig",
+    ],
+    "models.encodec": [
+        "EncodecConfig",
+        "EncodecFeatureExtractor",
+    ],
+    "models.encoder_decoder": ["EncoderDecoderConfig"],
+    "models.ernie": ["ErnieConfig"],
+    "models.esm": ["EsmConfig", "EsmTokenizer"],
+    "models.falcon": ["FalconConfig"],
+    "models.falcon_mamba": ["FalconMambaConfig"],
+    "models.fastspeech2_conformer": [
+        "FastSpeech2ConformerConfig",
+        "FastSpeech2ConformerHifiGanConfig",
+        "FastSpeech2ConformerTokenizer",
+        "FastSpeech2ConformerWithHifiGanConfig",
+    ],
+    "models.flaubert": ["FlaubertConfig", "FlaubertTokenizer"],
+    "models.flava": [
+        "FlavaConfig",
+        "FlavaImageCodebookConfig",
+        "FlavaImageConfig",
+        "FlavaMultimodalConfig",
+        "FlavaTextConfig",
+    ],
+    "models.fnet": ["FNetConfig"],
+    "models.focalnet": ["FocalNetConfig"],
+    "models.fsmt": [
+        "FSMTConfig",
+        "FSMTTokenizer",
+    ],
+    "models.funnel": [
+        "FunnelConfig",
+        "FunnelTokenizer",
+    ],
+    "models.fuyu": ["FuyuConfig"],
+    "models.gemma": ["GemmaConfig"],
+    "models.gemma2": ["Gemma2Config"],
+    "models.gemma3": ["Gemma3Config", "Gemma3Processor", "Gemma3TextConfig"],
+    "models.git": [
+        "GitConfig",
+        "GitProcessor",
+        "GitVisionConfig",
+    ],
+    "models.glm": ["GlmConfig"],
+    "models.glpn": ["GLPNConfig"],
+    "models.got_ocr2": [
+        "GotOcr2Config",
+        "GotOcr2Processor",
+        "GotOcr2VisionConfig",
+    ],
+    "models.gpt2": [
+        "GPT2Config",
+        "GPT2Tokenizer",
+    ],
+    "models.gpt_bigcode": ["GPTBigCodeConfig"],
+    "models.gpt_neo": ["GPTNeoConfig"],
+    "models.gpt_neox": ["GPTNeoXConfig"],
+    "models.gpt_neox_japanese": ["GPTNeoXJapaneseConfig"],
+    "models.gpt_sw3": [],
+    "models.gptj": ["GPTJConfig"],
+    "models.granite": ["GraniteConfig"],
+    "models.granitemoe": ["GraniteMoeConfig"],
+    "models.granitemoeshared": ["GraniteMoeSharedConfig"],
+    "models.grounding_dino": [
+        "GroundingDinoConfig",
+        "GroundingDinoProcessor",
+    ],
+    "models.groupvit": [
+        "GroupViTConfig",
+        "GroupViTTextConfig",
+        "GroupViTVisionConfig",
+    ],
+    "models.helium": ["HeliumConfig"],
+    "models.herbert": ["HerbertTokenizer"],
+    "models.hiera": ["HieraConfig"],
+    "models.hubert": ["HubertConfig"],
+    "models.ibert": ["IBertConfig"],
+    "models.idefics": ["IdeficsConfig"],
+    "models.idefics2": ["Idefics2Config"],
+    "models.idefics3": ["Idefics3Config"],
+    "models.ijepa": ["IJepaConfig"],
+    "models.imagegpt": ["ImageGPTConfig"],
+    "models.informer": ["InformerConfig"],
+    "models.instructblip": [
+        "InstructBlipConfig",
+        "InstructBlipProcessor",
+        "InstructBlipQFormerConfig",
+        "InstructBlipVisionConfig",
+    ],
+    "models.instructblipvideo": [
+        "InstructBlipVideoConfig",
+        "InstructBlipVideoProcessor",
+        "InstructBlipVideoQFormerConfig",
+        "InstructBlipVideoVisionConfig",
+    ],
+    "models.jamba": ["JambaConfig"],
+    "models.jetmoe": ["JetMoeConfig"],
+    "models.kosmos2": [
+        "Kosmos2Config",
+        "Kosmos2Processor",
+    ],
+    "models.layoutlm": [
+        "LayoutLMConfig",
+        "LayoutLMTokenizer",
+    ],
+    "models.layoutlmv2": [
+        "LayoutLMv2Config",
+        "LayoutLMv2FeatureExtractor",
+        "LayoutLMv2ImageProcessor",
+        "LayoutLMv2Processor",
+        "LayoutLMv2Tokenizer",
+    ],
+    "models.layoutlmv3": [
+        "LayoutLMv3Config",
+        "LayoutLMv3FeatureExtractor",
+        "LayoutLMv3ImageProcessor",
+        "LayoutLMv3Processor",
+        "LayoutLMv3Tokenizer",
+    ],
+    "models.layoutxlm": ["LayoutXLMProcessor"],
+    "models.led": ["LEDConfig", "LEDTokenizer"],
+    "models.levit": ["LevitConfig"],
+    "models.lilt": ["LiltConfig"],
+    "models.llama": ["LlamaConfig"],
+    "models.llava": [
+        "LlavaConfig",
+        "LlavaProcessor",
+    ],
+    "models.llava_next": [
+        "LlavaNextConfig",
+        "LlavaNextProcessor",
+    ],
+    "models.llava_next_video": [
+        "LlavaNextVideoConfig",
+        "LlavaNextVideoProcessor",
+    ],
+    "models.llava_onevision": ["LlavaOnevisionConfig", "LlavaOnevisionProcessor"],
+    "models.longformer": [
+        "LongformerConfig",
+        "LongformerTokenizer",
+    ],
+    "models.longt5": ["LongT5Config"],
+    "models.luke": [
+        "LukeConfig",
+        "LukeTokenizer",
+    ],
+    "models.lxmert": [
+        "LxmertConfig",
+        "LxmertTokenizer",
+    ],
+    "models.m2m_100": ["M2M100Config"],
+    "models.mamba": ["MambaConfig"],
+    "models.mamba2": ["Mamba2Config"],
+    "models.marian": ["MarianConfig"],
+    "models.markuplm": [
+        "MarkupLMConfig",
+        "MarkupLMFeatureExtractor",
+        "MarkupLMProcessor",
+        "MarkupLMTokenizer",
+    ],
+    "models.mask2former": ["Mask2FormerConfig"],
+    "models.maskformer": [
+        "MaskFormerConfig",
+        "MaskFormerSwinConfig",
+    ],
+    "models.mbart": ["MBartConfig"],
+    "models.mbart50": [],
+    "models.megatron_bert": ["MegatronBertConfig"],
+    "models.megatron_gpt2": [],
+    "models.mgp_str": [
+        "MgpstrConfig",
+        "MgpstrProcessor",
+        "MgpstrTokenizer",
+    ],
+    "models.mimi": ["MimiConfig"],
+    "models.mistral": ["MistralConfig"],
+    "models.mistral3": ["Mistral3Config"],
+    "models.mixtral": ["MixtralConfig"],
+    "models.mllama": [
+        "MllamaConfig",
+        "MllamaProcessor",
+    ],
+    "models.mluke": [],
+    "models.mobilebert": [
+        "MobileBertConfig",
+        "MobileBertTokenizer",
+    ],
+    "models.mobilenet_v1": ["MobileNetV1Config"],
+    "models.mobilenet_v2": ["MobileNetV2Config"],
+    "models.mobilevit": ["MobileViTConfig"],
+    "models.mobilevitv2": ["MobileViTV2Config"],
+    "models.modernbert": ["ModernBertConfig"],
+    "models.moonshine": ["MoonshineConfig"],
+    "models.moshi": [
+        "MoshiConfig",
+        "MoshiDepthConfig",
+    ],
+    "models.mpnet": [
+        "MPNetConfig",
+        "MPNetTokenizer",
+    ],
+    "models.mpt": ["MptConfig"],
+    "models.mra": ["MraConfig"],
+    "models.mt5": ["MT5Config"],
+    "models.musicgen": [
+        "MusicgenConfig",
+        "MusicgenDecoderConfig",
+    ],
+    "models.musicgen_melody": [
+        "MusicgenMelodyConfig",
+        "MusicgenMelodyDecoderConfig",
+    ],
+    "models.mvp": ["MvpConfig", "MvpTokenizer"],
+    "models.myt5": ["MyT5Tokenizer"],
+    "models.nemotron": ["NemotronConfig"],
+    "models.nllb": [],
+    "models.nllb_moe": ["NllbMoeConfig"],
+    "models.nougat": ["NougatProcessor"],
+    "models.nystromformer": ["NystromformerConfig"],
+    "models.olmo": ["OlmoConfig"],
+    "models.olmo2": ["Olmo2Config"],
+    "models.olmoe": ["OlmoeConfig"],
+    "models.omdet_turbo": [
+        "OmDetTurboConfig",
+        "OmDetTurboProcessor",
+    ],
     "models.oneformer": [
         "OneFormerConfig",
         "OneFormerProcessor",
