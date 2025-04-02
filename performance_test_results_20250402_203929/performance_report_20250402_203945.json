@@ -1,0 +1,56 @@
+{
+    "test_date": "2025-04-02 20:39:45",
+    "device": "cpu",
+    "results": {
+        "inference": {
+            "Ontological_1024": {
+                "parameters": 82167810,
+                "memory_usage_mb": 313.44532012939453,
+                "latency_ms": 53.18030118942261,
+                "throughput_tokens_per_sec": 4813.812525960601,
+                "parameter_efficiency": 58.58513846189403
+            },
+            "Ontological_2048": {
+                "parameters": 264998914,
+                "memory_usage_mb": 1010.8906326293945,
+                "latency_ms": 147.23995923995972,
+                "throughput_tokens_per_sec": 1738.6584546847912,
+                "parameter_efficiency": 6.561002188427048
+            },
+            "StandardTransformer": {
+                "parameters": 52188674,
+                "memory_usage_mb": 199.08399200439453,
+                "latency_ms": 18.005502223968506,
+                "throughput_tokens_per_sec": 14217.876114514525,
+                "parameter_efficiency": 272.43221612632897
+            },
+            "BERTStyleModel": {
+                "parameters": 52190210,
+                "memory_usage_mb": 199.08985137939453,
+                "latency_ms": 18.272006511688232,
+                "throughput_tokens_per_sec": 14010.50288791447,
+                "parameter_efficiency": 268.4507858449788
+            },
+            "DeepSeekV3": {
+                "parameters": 529891330,
+                "memory_usage_mb": 2021.3750076293945,
+                "latency_ms": 182.1576952934265,
+                "throughput_tokens_per_sec": 1405.3757080513426,
+                "parameter_efficiency": 2.652196079621349
+            }
+        }
+    },
+    "charts": {
+        "latency": "performance_test_results_20250402_203929/latency_comparison_20250402_203945.png",
+        "throughput": "performance_test_results_20250402_203929/throughput_comparison_20250402_203945.png",
+        "memory": "performance_test_results_20250402_203929/memory_comparison_20250402_203945.png",
+        "parameters": "performance_test_results_20250402_203929/parameters_comparison_20250402_203945.png",
+        "efficiency": "performance_test_results_20250402_203929/efficiency_comparison_20250402_203945.png"
+    },
+    "performance_summary": {
+        "fastest_model": "StandardTransformer",
+        "highest_throughput_model": "StandardTransformer",
+        "lowest_memory_model": "StandardTransformer",
+        "most_efficient_model": "StandardTransformer"
+    }
+}
