@@ -1,0 +1,135 @@
+{
+    "test_date": "2025-04-02 22:46:07",
+    "dataset": "sst2",
+    "epochs": 3,
+    "batch_size": 16,
+    "learning_rate": 5e-05,
+    "models_tested": [
+        "OntologicalTransformer-1024",
+        "OntologicalTransformer-2048",
+        "StandardTransformer",
+        "BERTStyleModel"
+    ],
+    "results": {
+        "OntologicalTransformer-1024": {
+            "train_loss": [
+                0.9014387435913086,
+                0.7120785465240479,
+                0.7389111857414246
+            ],
+            "train_acc": [
+                0.5,
+                0.536,
+                0.498
+            ],
+            "val_loss": [
+                0.7099905705451965,
+                0.7666546249389649,
+                0.7222753858566284
+            ],
+            "val_acc": [
+                0.48,
+                0.52,
+                0.52
+            ]
+        },
+        "OntologicalTransformer-2048": {
+            "train_loss": [
+                0.953057555437088,
+                0.7388374395370484,
+                0.7255786175727844
+            ],
+            "train_acc": [
+                0.5,
+                0.528,
+                0.452
+            ],
+            "val_loss": [
+                0.9439220523834229,
+                0.6935047197341919,
+                0.692622561454773
+            ],
+            "val_acc": [
+                0.52,
+                0.52,
+                0.52
+            ]
+        },
+        "StandardTransformer": {
+            "train_loss": [
+                0.7204812335968017,
+                0.6971798896789551,
+                0.6966339359283448
+            ],
+            "train_acc": [
+                0.528,
+                0.504,
+                0.524
+            ],
+            "val_loss": [
+                0.71293212890625,
+                0.6960288143157959,
+                0.6963994789123535
+            ],
+            "val_acc": [
+                0.48,
+                0.52,
+                0.48
+            ]
+        },
+        "BERTStyleModel": {
+            "train_loss": [
+                0.7358184862136841,
+                0.7076924333572387,
+                0.6963983364105225
+            ],
+            "train_acc": [
+                0.464,
+                0.518,
+                0.536
+            ],
+            "val_loss": [
+                0.701879529953003,
+                0.6911218643188477,
+                0.6911781668663025
+            ],
+            "val_acc": [
+                0.52,
+                0.54,
+                0.52
+            ]
+        }
+    },
+    "plot_paths": {
+        "accuracy": "./model_comparison_results/accuracy_comparison_20250402_224607.png",
+        "loss": "./model_comparison_results/loss_comparison_20250402_224607.png",
+        "learning_speed": "./model_comparison_results/learning_speed_comparison_20250402_224607.png",
+        "final_performance": "./model_comparison_results/final_performance_comparison_20250402_224607.png"
+    },
+    "performance_summary": {
+        "OntologicalTransformer-1024": {
+            "final_train_acc": 0.498,
+            "final_val_acc": 0.52,
+            "convergence_epoch": 2,
+            "learning_speed": 0.52
+        },
+        "OntologicalTransformer-2048": {
+            "final_train_acc": 0.452,
+            "final_val_acc": 0.52,
+            "convergence_epoch": 1,
+            "learning_speed": 0.52
+        },
+        "StandardTransformer": {
+            "final_train_acc": 0.524,
+            "final_val_acc": 0.48,
+            "convergence_epoch": 2,
+            "learning_speed": 0.48
+        },
+        "BERTStyleModel": {
+            "final_train_acc": 0.536,
+            "final_val_acc": 0.52,
+            "convergence_epoch": 1,
+            "learning_speed": 0.52
+        }
+    }
+}

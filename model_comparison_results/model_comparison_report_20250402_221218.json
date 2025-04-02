@@ -1,0 +1,77 @@
+{
+    "test_date": "2025-04-02 22:12:18",
+    "dataset": "sst2",
+    "epochs": 3,
+    "batch_size": 16,
+    "learning_rate": 5e-05,
+    "models_tested": [
+        "OntologicalTransformer-768",
+        "BERTStyleModel"
+    ],
+    "results": {
+        "OntologicalTransformer-768": {
+            "train_loss": [
+                0.9602824592590332,
+                0.7552299737930298,
+                0.7311653089523316
+            ],
+            "train_acc": [
+                0.495,
+                0.495,
+                0.515
+            ],
+            "val_loss": [
+                0.7046513199806214,
+                0.7150995016098023,
+                0.6941562771797181
+            ],
+            "val_acc": [
+                0.55,
+                0.55,
+                0.45
+            ]
+        },
+        "BERTStyleModel": {
+            "train_loss": [
+                0.7171591281890869,
+                0.7284417128562928,
+                0.7077115249633789
+            ],
+            "train_acc": [
+                0.51,
+                0.5,
+                0.53
+            ],
+            "val_loss": [
+                0.6783805131912232,
+                0.7116825103759765,
+                0.6859355449676514
+            ],
+            "val_acc": [
+                0.55,
+                0.45,
+                0.5
+            ]
+        }
+    },
+    "plot_paths": {
+        "accuracy": "./model_comparison_results/accuracy_comparison_20250402_221218.png",
+        "loss": "./model_comparison_results/loss_comparison_20250402_221218.png",
+        "learning_speed": "./model_comparison_results/learning_speed_comparison_20250402_221218.png",
+        "final_performance": "./model_comparison_results/final_performance_comparison_20250402_221218.png"
+    },
+    "performance_summary": {
+        "OntologicalTransformer-768": {
+            "final_train_acc": 0.515,
+            "final_val_acc": 0.45,
+            "convergence_epoch": 1,
+            "learning_speed": 0.45
+        },
+        "BERTStyleModel": {
+            "final_train_acc": 0.53,
+            "final_val_acc": 0.5,
+            "convergence_epoch": 1,
+            "learning_speed": 0.5
+        }
+    }
+}
