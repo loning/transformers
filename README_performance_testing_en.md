@@ -1,166 +1,186 @@
 # Ontological Transformer Performance Testing Guide
 
-This document provides detailed instructions on how to run performance tests for the Ontological Transformer model and generate reports. Tests include basic operation performance tests, comparisons with the Standard Transformer, comparisons with BERT-style models, comparisons with DeepSeek V3 series models, and comparisons of Ontological Transformers with different hidden dimensions (768, 2048, 8192, 32768).
+This document provides detailed instructions on how to run performance tests for the Ontological Transformer model and generate comparison reports.
 
 ## Table of Contents
 
-- [Test Environment Setup](#test-environment-setup)
-- [Basic Performance Tests](#basic-performance-tests)
-- [Model Comparison Tests](#model-comparison-tests)
-- [Hidden Dimension Tests](#hidden-dimension-tests)
-- [Generating Performance Reports](#generating-performance-reports)
-- [Interpreting Test Results](#interpreting-test-results)
+1. [Environment Setup](#environment-setup)
+2. [Basic Performance Testing](#basic-performance-testing)
+3. [Pretrained Model Performance Testing](#pretrained-model-performance-testing)
+4. [Generating Performance Reports](#generating-performance-reports)
+5. [Adding Custom Models](#adding-custom-models)
+6. [Interpreting Results](#interpreting-results)
+7. [Frequently Asked Questions](#frequently-asked-questions)
 
-## Test Environment Setup
+## Environment Setup
 
-### Dependencies Installation
-
-Ensure all necessary dependencies are installed:
-
-```bash
-pip install torch numpy matplotlib pandas reportlab psutil
-```
-
-If you want to run comparisons with DeepSeek V3, you'll also need to install:
+### Installing Dependencies
 
 ```bash
+# Create and activate a virtual environment (optional)
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# or
+venv\Scripts\activate  # Windows
+
+# Install required dependencies
+pip install torch numpy matplotlib pandas psutil reportlab tqdm
+
+# If DeepSeek model comparison is needed, also install
 pip install deepseek-ai
 ```
 
 ### Hardware Requirements
 
-For reproducible results, it's recommended to run tests on hardware with these specifications:
+- CPU testing: Any modern multi-core processor
+- GPU testing: CUDA-compatible NVIDIA GPU (minimum 8GB VRAM)
+- Memory: Minimum 8GB, recommended 16GB+ (especially when testing large models)
 
-- CPU: At least 8 cores
-- Memory: At least 16GB RAM
-- Storage: At least 10GB free space
-- GPU (optional): For accelerating DeepSeek V3 model tests
+## Basic Performance Testing
 
-## Basic Performance Tests
-
-Basic performance tests evaluate the execution efficiency of the three basic operations (XOR, SHIFT, FLIP) in the Ontological Transformer:
+Basic performance testing primarily evaluates the efficiency of the model's fundamental operations (XOR, SHIFT, FLIP).
 
 ```bash
+# Run basic performance test
 python benchmark_ontological.py
+
+# Run with GPU if available
+python benchmark_ontological.py --device cuda
+
+# Customize batch size and sequence length
+python benchmark_ontological.py --batch_size 8 --seq_length 256
 ```
 
-This script will measure:
-- Execution time for each basic operation
-- Scalability of basic operations with different input sizes
-- Memory usage of basic operations
+### Parameter Description
 
-Test results will be output to the terminal and can optionally be saved to a CSV file.
+- `--device`: Device type, options 'cpu' or 'cuda'
+- `--batch_size`: Batch size, default is 4
+- `--seq_length`: Sequence length, default is 128
+- `--num_runs`: Number of runs, default is 100
+- `--warm_up`: Number of warm-up runs, default is 10
 
-## Model Comparison Tests
+## Pretrained Model Performance Testing
 
-### Comparison with Standard Transformer
-
-```bash
-python benchmark_ontological_vs_standard.py
-```
-
-This test compares the performance of the Ontological Transformer with the Standard Transformer model when processing the same input, including:
-- Latency comparison
-- Throughput comparison
-- Memory usage comparison
-- Parameter count comparison
-
-### Comparison with Pre-trained Models
-
-To compare the Ontological Transformer with BERT-style models and DeepSeek V3 models:
+Pretrained model performance testing compares the Ontological Transformer with other models in processing actual text.
 
 ```bash
+# Run pretrained model performance test
 python benchmark_ontological_pretrained.py
+
+# Include DeepSeek V3 model comparison
+python benchmark_ontological_pretrained.py --include_deepseek
+
+# Compare different hidden dimension sizes of Ontological Transformer
+python benchmark_ontological_pretrained.py --include_ontological_sizes
 ```
 
-This script uses a Wikipedia text sample by default. You can modify test settings with parameters:
+### Parameter Description
 
-```bash
-python benchmark_ontological_pretrained.py --batch_size 8 --seq_length 256 --include_deepseek --deepseek_size mini
-```
-
-Parameter explanations:
-- `--batch_size`: Set batch size (default is 4)
-- `--seq_length`: Set sequence length (default is 128)
-- `--include_deepseek`: Whether to include DeepSeek V3 model
-- `--deepseek_size`: DeepSeek V3 model size (mini or base)
-- `--device`: Running device (cpu or cuda, default is cpu)
-
-## Hidden Dimension Tests
-
-To test the performance of Ontological Transformers with different hidden dimensions (768, 2048, 8192, 32768):
-
-```bash
-python benchmark_ontological_dimensions.py
-```
-
-This script will compare the performance differences of Ontological Transformers with different hidden dimensions, including:
-- Latency changes with increasing parameter count
-- Throughput changes with increasing parameter count
-- Memory usage changes with increasing parameter count
-- Parameter efficiency evaluation (throughput per million parameters)
+- `--device`: Device type, options 'cpu' or 'cuda'
+- `--batch_size`: Batch size, default is 4
+- `--seq_length`: Sequence length, default is 128
+- `--include_deepseek`: Whether to include DeepSeek model, default is False
+- `--deepseek_size`: DeepSeek model size, options 'mini' or 'base', default is 'mini'
+- `--include_ontological_sizes`: Whether to test different hidden dimensions (768, 2048, 8192, 32768) of Ontological Transformer, default is False
+- `--test_wiki_text`: Whether to use Wikipedia sample text, default is True
 
 ## Generating Performance Reports
 
-After completing tests, you can generate detailed PDF performance reports:
-
-### English Version Report
+After performance testing is complete, you can generate detailed PDF reports comparing the performance data of all models.
 
 ```bash
+# Generate Chinese version performance report
+python generate_performance_report.py
+
+# Generate English version performance report
 python generate_performance_report_en.py
 ```
 
-### Chinese Version Report
+### Report Contents
 
-```bash
-python generate_performance_report.py
+The generated PDF report includes the following:
+
+1. Performance metrics comparison table for different models
+2. Latency comparison chart
+3. Throughput comparison chart
+4. Memory usage comparison chart
+5. Parameter count comparison chart
+6. Parameter efficiency comparison chart (throughput per million parameters)
+7. Parameter count vs. latency relationship chart
+8. Detailed performance analysis and application scenarios for different models
+
+## Adding Custom Models
+
+If you want to add custom models for comparison testing, follow these steps:
+
+1. Add new model implementation in the `ModelBenchmark` class in `benchmark_ontological_pretrained.py`
+2. Add initialization code in the class's `__init__` method
+3. Modify the `test_models` method to include testing of the new model
+4. Update the `results` dictionary in `generate_performance_report.py` and `generate_performance_report_en.py` to include performance data of the new model
+
+Example:
+```python
+# Add new model in ModelBenchmark class
+def __init__(self, ...):
+    # Existing code
+    
+    # Initialize new model
+    if include_my_model:
+        self.my_model = MyCustomModel(...)
+        print("Initializing My Custom Model")
+
+def test_models(self, ...):
+    # Existing code
+    
+    # Test new model
+    if hasattr(self, 'my_model'):
+        start_time = time.time()
+        # Model forward pass code
+        latency = (time.time() - start_time) * 1000 / num_runs
+        results['MyModel'] = {
+            'latency': latency,
+            'throughput': (batch_size * seq_length * 1000) / latency,
+            'memory': self.get_memory_usage(),
+            'cpu_usage': self.get_cpu_usage()
+        }
 ```
 
-The generated PDF reports include:
-- Detailed performance comparisons of all tested models
-- Visualization charts of various performance metrics
-- Descriptions of test methods and environment
-- Performance analysis and application scenario recommendations
-- Conclusions and future work directions
+## Interpreting Results
 
-The report files will be saved as:
-- English version: `ontological_model_performance_report_en.pdf`
-- Chinese version: `ontological_model_performance_report.pdf`
+### Latency
 
-## Interpreting Test Results
+Latency represents the average time (milliseconds) required for the model to process a batch of inputs. Lower latency means faster model response, especially suitable for applications requiring real-time processing.
 
-### Key Performance Metrics
+### Throughput
 
-Test results include the following key metrics:
+Throughput represents the number of tokens the model can process per second. Higher throughput means higher efficiency in processing large amounts of data, suitable for batch processing scenarios.
 
-1. **Latency**: Average time required for the model to process input, measured in milliseconds (ms). Lower is better.
+### Memory Usage
 
-2. **Throughput**: Number of tokens processed per second by the model, measured in tokens/sec. Higher is better.
+Memory usage represents the peak memory consumption (MB) during model operation. Lower memory usage means the model requires fewer system resources, more suitable for resource-constrained environments.
 
-3. **Memory Usage**: Peak memory occupation during model execution, measured in MB. Lower is better.
+### Parameter Efficiency
 
-4. **Parameter Count**: Total number of parameters in the model, reflecting model complexity and storage requirements.
+Parameter efficiency measures the throughput produced per million parameters. This metric reflects the design efficiency of the model architecture; models with high parameter efficiency can achieve better performance with fewer parameters.
 
-5. **Parameter Efficiency**: Throughput per million parameters, reflecting the efficiency of the model architecture. Higher is better.
+## Frequently Asked Questions
 
-### Model Performance Analysis
+### Q: What should I do if I encounter a "CUDA out of memory" error during testing?
 
-Based on test results, you can observe the following points:
+A: Reduce the batch size (`--batch_size`) or sequence length (`--seq_length`), or use a GPU with more VRAM.
 
-1. **Basic Operation Efficiency**: The XOR, SHIFT, and FLIP basic operations in the Ontological Transformer are more efficient than traditional matrix multiplication, which is the foundation of its overall performance advantage.
+### Q: Is it normal that testing DeepSeek models is very slow?
 
-2. **Relationship Between Scale and Performance**: As hidden dimension increases, the Ontological Transformer's parameter count increases, but the performance degradation rate is far lower than the parameter growth rate, indicating good scalability of its architecture.
+A: Yes, large models like DeepSeek have an extremely large number of parameters and will test slowly on ordinary hardware, especially in CPU mode.
 
-3. **Parameter Efficiency**: The Ontological Transformer-768 has the highest parameter efficiency, producing a throughput of about 1,872 per million parameters, far higher than other models.
+### Q: How do I test my own trained Ontological Transformer model?
 
-4. **Application Scenarios**: Different scales of the Ontological Transformer are suitable for different application scenarios, from resource-constrained mobile devices (768) to complex tasks requiring deep semantic understanding (32768).
+A: Modify the model loading part in `benchmark_ontological_pretrained.py` to point to your own model weight files.
 
-### Notes for Reproducing Results
+### Q: What if the charts in the report are unclear or Chinese characters display as squares?
 
-1. Ensure tests are run in the same hardware environment, as different CPU/GPU models may lead to result differences.
+A: Ensure that the corresponding Chinese fonts are installed on your system, or modify the font settings in `generate_performance_report.py`.
 
-2. System load affects test results; it's recommended to run tests under low load conditions.
+---
 
-3. For DeepSeek V3 model tests, downloading model weights may take a significant amount of time on first run.
-
-4. Running tests multiple times and taking the average can yield more stable results. 
+For other questions, please submit an issue or contact the project maintainer. 

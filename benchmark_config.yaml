@@ -1,0 +1,37 @@
+# Ontological Transformer Performance Testing Configuration
+
+# 基本设置 / Basic Settings
+device: "cpu"  # 可选 "cpu" 或 "cuda" / Options: "cpu" or "cuda"
+batch_size: 4
+seq_length: 128
+num_runs: 100
+warm_up: 10
+
+# 模型选择 / Model Selection
+include_standard: true     # 是否包含标准Transformer / Include Standard Transformer
+include_bert: true         # 是否包含BERT风格模型 / Include BERT-style model
+include_deepseek: true     # 是否包含DeepSeek模型 / Include DeepSeek model
+deepseek_size: "mini"      # DeepSeek模型大小，可选 "mini" 或 "base" / DeepSeek model size, options: "mini" or "base"
+
+# 宇宙本体模型配置 / Ontological Transformer Configuration
+include_ontological_sizes: true  # 是否测试不同隐藏层维度的宇宙本体模型 / Test different hidden dimensions
+ontological_hidden_sizes:        # 要测试的隐藏层维度列表 / List of hidden dimensions to test
+  - 768
+  - 2048
+  - 8192
+  - 32768
+
+# 测试数据 / Test Data
+test_wiki_text: true  # 是否使用维基百科样本文本 / Use Wikipedia sample text
+
+# 输出设置 / Output Settings
+save_results: true                        # 是否保存结果 / Save results
+results_file: "benchmark_results.json"    # 结果保存文件名 / Results filename
+generate_report: true                     # 是否生成PDF报告 / Generate PDF report
+report_language: "both"                   # 报告语言，可选 "zh", "en", "both" / Report language, options: "zh", "en", "both"
+
+# 高级设置 / Advanced Settings
+memory_tracking: true       # 是否跟踪内存使用 / Track memory usage
+cpu_tracking: true          # 是否跟踪CPU使用 / Track CPU usage
+precision: "fp32"           # 计算精度，可选 "fp32", "fp16", "bf16" / Computation precision, options: "fp32", "fp16", "bf16"
+seed: 42                    # 随机种子 / Random seed 
